@@ -1,0 +1,89 @@
+<!--
+ * @file     insert.ejs
+ * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
+ * @version  1.0
+ * @date     October 27 2026
+ * @brief    insert UI
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <div class="container">
+
+            <%- include('../partials/header.ejs') %>
+
+                <main class="mt-5">
+
+                    <h2 class="text-center mb-4">Add a New Country</h2>
+
+                    <form action="/insert" method="POST" class="bg-light p-4 rounded shadow-sm">
+
+                        <!-- Country Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Country Name</label>
+                            <input type="text" name="Country" class="form-control" required>
+                        </div>
+
+                        <!-- Population -->
+                        <div class="mb-3">
+                            <label class="form-label">Population</label>
+                            <input type="number" name="Population" class="form-control" min="0" required>
+                        </div>
+
+                        <!-- Capital -->
+                        <div class="mb-3">
+                            <label class="form-label">Capital</label>
+                            <input type="text" name="Capital" class="form-control" required>
+                        </div>
+
+                        <!-- Population Density -->
+                        <div class="mb-3">
+                            <label class="form-label">Population Density</label>
+                            <input type="number" name="Density" class="form-control" min="0" step="any" required>
+                        </div>
+
+                        <!-- GDP -->
+                        <div class="mb-3">
+                            <label class="form-label">GDP (Optional)</label>
+                            <input type="number" name="PIB" class="form-control" min="0" step="any">
+                        </div>
+
+                        <!-- Visited -->
+                        <div class="mb-4">
+                            <label class="form-label">Visited</label>
+                            <select name="Visited" class="form-select" required>
+                                <option value="N">No</option>
+                                <option value="O">Yes</option>
+                            </select>
+                        </div>
+                        <!-- Comments -->
+                        <div class="mb-4">
+                            <label class="form-label">Comments</label>
+                             <input type="text" name="Comments" class="form-control">
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                Add Country
+                            </button>
+
+                            <a href="/" class="btn btn-secondary">
+                                Cancel
+                            </a>
+                        </div>
+
+                    </form>
+
+                </main>
+
+                <%- include('../partials/footer.ejs') %>
+
+        </div>
+    </body>
+
+</html>

@@ -16,9 +16,15 @@ app.set('views', './views');                        // Set the directory for vie
 app.use(express.static('./public'));                // Serve static files from the 'public' directory
 app.use(express.json());                            // Middleware to parse incoming JSON requests
 app.use(express.urlencoded({ extended: false }));   // Middleware to parse incoming URL-encoded requests
-app.use(require('./routes/index'));                 // Use the routes defined in the 'index' module
-app.use('/contacts', require('./routes/contacts')); // Use the routes defined in the 'contacts' module for '/contacts' path
 
+
+//====================[ ROUTES ]==================================
+
+app.use(require('./routes/index'));                 // Use the routes defined in the 'index' router 
+app.use(require('./routes/queries'));               // Use the routes defined in the 'queries' router
+app.use(require('./routes/contacts'));              // Use the routes defined in the 'contacts' router
+app.use(require('./routes/insert'));              // Use the routes defined in the 'contacts' router
+app.use(require('./routes/delete'));              // Use the routes defined in the 'contacts' router
 
 //=====================[ Server Initialization ]==========================
 

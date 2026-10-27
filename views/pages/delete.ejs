@@ -1,0 +1,49 @@
+<!--
+ * @file     insert.ejs
+ * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
+ * @version  1.0
+ * @date     October 27 2026
+ * @brief    insert UI
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <div class="container">
+
+            <%- include('../partials/header.ejs') %>
+
+                <main class="mt-5">
+
+                    <h2 class="text-center mb-4">Delete a Country</h2>
+
+                    <form action="/delete" method="POST" class="bg-light p-4 rounded shadow-sm">
+
+                        <!-- Country Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Country Name</label>
+                            <input type="text" name="Country" class="form-control" required>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                Delete Country
+                            </button>
+
+                            <a href="/" class="btn btn-secondary">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+
+                </main>
+
+                <%- include('../partials/footer.ejs') %>
+
+        </div>
+    </body>
+
+</html>

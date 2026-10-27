@@ -1,3 +1,11 @@
+/**
+ * @file     sql.js
+ * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
+ * @version  1.0
+ * @date     October 27 2026
+ * @brief    SQL Configuration file
+ */
+
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
@@ -13,7 +21,7 @@ connection.connect(function(err) {
         return;
     }
 
-    console.log("Vous êtes connecté à votre BDD...");
+    console.log("Succesfully Connected to Database");
 });
 
 module.exports = connection;

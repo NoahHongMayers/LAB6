@@ -12,14 +12,83 @@
 <%- include('../partials/head.ejs') %>
 
     <body>
-
+        <div class="container">
         <%- include('../partials/header.ejs') %>
 
-            <h1>Welcome to the Home Page</h1>
+            <div class="container mt-5">
 
-            <form action="/import" method="get">
-                <button type="submit">Import</button>
-            </form>
+                <!-- Import Table -->
+                <div class="text-center mb-4">
+                    <form action="/import0" method="get">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Import Table
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Query Buttons -->
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+
+                    <form action="/import1" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 1
+                        </button>
+                    </form>
+
+                    <form action="/import2" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 2
+                        </button>
+                    </form>
+
+                    <form action="/import3" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 3
+                        </button>
+                    </form>
+
+                    <form action="/import4" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 4
+                        </button>
+                    </form>
+
+                    <form action="/import5" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 5
+                        </button>
+                    </form>
+
+                    <form action="/import6" method="get">
+                        <button type="submit" class="btn btn-outline-primary">
+                            Query 6
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+            <% if (query == 1) { %>
+                <h4 class = "px-4"> 1. Quels sont les pays de plus de 100 000 000 d’habitants qui ont plus de 100 hab/km² ?</h4>
+
+            <% } else if (query == 2) { %>
+                <h4 class = "px-4"> 2. Quels sont les pays identifiés comme visités et qui ont un PIB plus grand que 2000 ou une population supérieure à 300 000 000 ?</h4>
+
+            <% } else if (query == 3) { %>
+                <h4 class = "px-4"> 3. Quels sont les pays commençant par A et dont le nom de la capitale contient un A ?</h4>
+
+            <% } else if (query == 4) { %>
+                <h4 class = "px-4"> 4. Quels sont les pays non visités ayant un PIB NULL ou une densité inférieure à 50, ou les pays visités ayant une population de moins de 50 000 000 d’habitants ?</h4>
+
+            <% } else if (query == 5) { %>
+                <h4 class = "px-4"> 5. Quel est le pays qui a le plus grand PIB ?</h4>
+
+            <% } else if (query == 6) { %>
+                <h4 class = "px-4"> 6. Quel est le pays qui a la plus petite population ?</h4>
+
+            <% } else if (query == 0) { %>
+                <h4 class = "px-4">Full Table</h4>
+            <% } %>
 
             <table class="table">
                 <thead>
@@ -46,7 +115,7 @@
             </table>
 
             <%- include('../partials/footer.ejs') %>
-
+        </div>
     </body>
 
 </html>

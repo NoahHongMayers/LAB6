@@ -1,0 +1,27 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "SQL LAB",
+  "keywords": [],
+  "homepage": "https://github.com/NoahHongMayers/LAB6#readme",
+  "bugs": {
+    "url": "https://github.com/NoahHongMayers/LAB6/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahHongMayers/LAB6.git"
+  },
+  "license": "ISC",
+  "author": "Noah Hong Mayers",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "mysql": "^2.18.1"
+  }
+}

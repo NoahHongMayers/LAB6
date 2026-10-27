@@ -1,0 +1,52 @@
+<!--
+ * @file     home.ejs
+ * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
+ * @version  1.0
+ * @date     September 22 2026
+ * @brief    Skeleton for a Node.js application using Express framework
+ */
+ -->
+<!DOCTYPE html>
+<html>
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/header.ejs') %>
+
+            <h1>Welcome to the Home Page</h1>
+
+            <form action="/import" method="get">
+                <button type="submit">Import</button>
+            </form>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <% fields.forEach(function(field) { %>
+                            <th>
+                                <%= field.name %>
+                            </th>
+                            <% }); %>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% rows.forEach(function(row) { %>
+                        <tr>
+                            <% fields.forEach(function(field) { %>
+                                <td>
+                                    <%= row[field.name] %>
+                                </td>
+                                <% }); %>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+</html>

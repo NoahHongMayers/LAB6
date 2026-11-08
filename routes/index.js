@@ -1,5 +1,5 @@
 /**
- * @file     app.js
+ * @file     index.js
  * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
  * @version  1.0
  * @date     September 22 2026

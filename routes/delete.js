@@ -11,7 +11,7 @@ var connection = require('../config/sql');
 
 //DISPLAY
 router.get('/delete', function (req, res) {
-    res.render('pages/delete');
+    res.render('pages/delete', { error: null });
 });
 
 //POST EVENT
@@ -30,7 +30,9 @@ router.post('/delete', function (req, res) {
         }
 
         if (result.affectedRows == 0) {
-            return res.send("Country not found");
+            return res.render('pages/delete', {
+                error: "Ce pays n'existe pas."
+            });
         }
 
         res.redirect('/import0');

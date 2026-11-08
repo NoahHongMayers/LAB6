@@ -26,7 +26,7 @@ var queries = [
   'SELECT * FROM caracpays WHERE NbHab IS NOT NULL ORDER BY NbHab ASC LIMIT 1'
 ];
 
-router.get('/import:num', function (req, res) {
+router.get('/requete:num', function (req, res) {
 
   var number = Number(req.params.num);
 

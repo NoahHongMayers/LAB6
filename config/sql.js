@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'paysg20'
+    database: 'PaysG20'
 });
 
 connection.connect(function(err) {

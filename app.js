@@ -39,10 +39,13 @@ let server = app.listen(PORT, function(){
 });
 
 //Errors
-app.use(function(err, req, res, next) {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+    console.error(err);
 
+    res.status(err.status || 500).render('error', {
+        message: err.message,
+        error: req.app.get('env') === 'development' ? err : {}
+    });
 });
 
 module.exports = {app: app};

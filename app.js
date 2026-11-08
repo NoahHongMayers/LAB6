@@ -23,8 +23,8 @@ app.use(express.urlencoded({ extended: false }));   // Middleware to parse incom
 app.use(require('./routes/index'));                 // Use the routes defined in the 'index' router 
 app.use(require('./routes/queries'));               // Use the routes defined in the 'queries' router
 app.use(require('./routes/contacts'));              // Use the routes defined in the 'contacts' router
-app.use(require('./routes/insert'));              // Use the routes defined in the 'contacts' router
-app.use(require('./routes/delete'));              // Use the routes defined in the 'contacts' router
+app.use(require('./routes/insert'));              // Use the routes defined in the 'insert' router D4
+app.use(require('./routes/delete'));              // Use the routes defined in the 'delete' router D4
 
 //=====================[ Server Initialization ]==========================
 
@@ -34,17 +34,18 @@ app.use(function (req, res, next) {
     res.render("pages/404.ejs");
 });
 // Start the server
-let server = app.listen(PORT, function(){
+let server = app.listen(PORT, function () {
     console.log('Server launched on port ' + PORT);
 });
 
 //Errors
-app.use(function(err, req, res, next) {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+    //D1 : Indentation corrigée
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
 });
 
-module.exports = {app: app};
+module.exports = { app: app };
 
 //=====================[ End of File ]==========================

@@ -8,16 +8,18 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>404 - Page Not Found</title>
-</head>
+<!-- B5 : même mise en page que les autres pages -->
+<%- include('../partials/head.ejs') %>
 
 <body>
-
-    <h1>404 - Page Not Found</h1>
-    <p><a href="/">Return Home</a></p>
-
+    <div class="container">
+        <%- include('../partials/header.ejs') %>
+        <main class="mt-5">
+            <h1>404 - Page Not Found</h1>
+            <p><a href="/" class="btn btn-primary">Return Home</a></p>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </div>
 </body>
 
 </html>

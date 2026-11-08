@@ -46,10 +46,8 @@ router.post('/insert', function (req, res) {
             return res.status(500).send("Database error: " + err.message);
         }
 
-        res.redirect('/import0');
+        res.redirect('/requete0'); // A14 / D3 : route renommée
     });
 });
 
-module.exports = router;
-
-module.exports = router;
+module.exports = router; // C1 : export en double supprimé

@@ -1,9 +1,10 @@
 <!--
- * @file     insert.ejs
+ * @file     delete.ejs
  * @author   Noah Hong Mayers | 202430525@edu.clg.qc.ca
  * @version  1.0
  * @date     October 27 2026
- * @brief    insert UI
+ * @brief    delete UI
+ * D2 : en-tête corrigé
  */
  -->
 <!DOCTYPE html>
@@ -20,6 +21,10 @@
 
                     <h2 class="text-center mb-4">Delete a Country</h2>
 
+                    <!-- B3 : affichage de l'erreur sans quitter le formulaire -->
+                    <% if (error) { %>
+                        <div class="alert alert-danger"><%= error %></div>
+                    <% } %>
                     <form action="/delete" method="POST" class="bg-light p-4 rounded shadow-sm">
 
                         <!-- Country Name -->

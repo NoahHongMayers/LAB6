@@ -10,8 +10,9 @@ var express = require('express');// Import the Express framework
 var router = express.Router();// Create a new router object to handle routes
 
 
+// D1 : indentation corrigée
 router.get('/contacts', function(req, res, next) {
-res.render('pages/contacts', { title: 'Contacts' });
+    res.render('pages/contacts', { title: 'Contacts' });
 });
 
 module.exports = router;// Export the router object to be used in other parts of the application

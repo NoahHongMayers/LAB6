@@ -11,7 +11,7 @@ var connection = require('../config/sql');
 
 //DISPLAY
 router.get('/delete', function (req, res) {
-    res.render('pages/delete');
+    res.render('pages/delete', { error: null });
 });
 
 //POST EVENT
@@ -30,13 +30,11 @@ router.post('/delete', function (req, res) {
         }
 
         if (result.affectedRows == 0) {
-            return res.send("Country not found");
+            return res.render('pages/delete', { error: 'Country not found' }); // B3 : erreur affichée dans le formulaire
         }
 
-        res.redirect('/import0');
+        res.redirect('/requete0'); // A14 / D3 : route renommée
     });
 });
 
-module.exports = router;
-
-module.exports = router;
+module.exports = router; // C1 : export en double supprimé

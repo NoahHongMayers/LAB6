@@ -106,5 +106,3 @@ router.post('/insert', function (req, res) {
 });
 
 module.exports = router;
-
-module.exports = router;

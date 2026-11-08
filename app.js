@@ -23,8 +23,8 @@ app.use(express.urlencoded({ extended: false }));   // Middleware to parse incom
 app.use(require('./routes/index'));                 // Use the routes defined in the 'index' router 
 app.use(require('./routes/queries'));               // Use the routes defined in the 'queries' router
 app.use(require('./routes/contacts'));              // Use the routes defined in the 'contacts' router
-app.use(require('./routes/insert'));              // Use the routes defined in the 'contacts' router
-app.use(require('./routes/delete'));              // Use the routes defined in the 'contacts' router
+app.use(require('./routes/insert')); // Routes d'insertion
+app.use(require('./routes/delete')); // Routes de suppression
 
 //=====================[ Server Initialization ]==========================
 
